@@ -34,10 +34,12 @@ const Background = () => (
 
 const ProfilePicture = styled(Image)`
   border-radius: 50%;
-  transition: all 0.25s ease-out;
+  transition: all 0.85s ease-out 0s;
 
   &:hover {
-    border-radius: 20%;
+    background-color: #7c37ad;
+    border-radius: 50%;
+    transform: rotate(360deg);
   }
 `;
 
