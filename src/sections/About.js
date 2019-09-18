@@ -11,9 +11,9 @@ import markdownRenderer from '../components/MarkdownRenderer';
 const Background = () => (
   <div>
     <Triangle
-      color="secondaryLight"
+      color="red"
       height={['50vh', '20vh']}
-      width={['50vw', '50vw']}
+      width={['49vw', '49vw']}
       invertY
     />
 
@@ -25,7 +25,7 @@ const Background = () => (
     />
 
     <Triangle
-      color="backgroundDark"
+      color="backgroudDark"
       height={['25vh', '20vh']}
       width={['100vw', '100vw']}
     />
@@ -37,7 +37,6 @@ const ProfilePicture = styled(Image)`
   transition: all 0.85s ease-out 0s;
 
   &:hover {
-    background-color: #7c37ad;
     border-radius: 50%;
     transform: rotate(360deg);
   }
