@@ -46,7 +46,7 @@ const Background = () => (
 
 const CARD_HEIGHT = '200px';
 
-const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
+const MEDIA_QUERY_SMALL = '@media (max-width: 300px)';
 
 const Title = styled(Text)`
   font-size: 14px;
