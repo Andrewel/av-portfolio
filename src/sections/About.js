@@ -13,7 +13,7 @@ const Background = () => (
     <Triangle
       color="secondaryLight"
       height={['50vh', '20vh']}
-      width={['50vw', '50vw']}
+      width={['49vw', '49vw']}
       invertY
     />
 
@@ -25,7 +25,7 @@ const Background = () => (
     />
 
     <Triangle
-      color="backgroundDark"
+      color="backgroudDark"
       height={['25vh', '20vh']}
       width={['100vw', '100vw']}
     />
@@ -34,16 +34,12 @@ const Background = () => (
 
 const ProfilePicture = styled(Image)`
   border-radius: 50%;
-  transition: all 0.25s ease-out;
-
-  &:hover {
-    border-radius: 20%;
-  }
+  transition: all 0.85s ease-out 0s;
 `;
 
 const About = () => (
   <Section.Container id="about" Background={Background}>
-    <Section.Header name="About me" icon="🙋‍♂️" label="person" />
+    <Section.Header name="About me" icon="👨‍💻" label="person" />
     <StaticQuery
       query={graphql`
         query AboutMeQuery {

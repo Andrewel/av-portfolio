@@ -18,8 +18,9 @@ const IconLink = styled(Link)`
 
 const SocialLink = ({ fontAwesomeIcon, name, url, color }) => (
   <Tooltip title={name} position="bottom" trigger="mouseenter">
+
     <IconLink
-      href={url}
+      href={name === "Contact me" ? `mailto:${url}` : url}
       target="_blank"
       color={color}
       rel="noreferrer"
@@ -27,6 +28,7 @@ const SocialLink = ({ fontAwesomeIcon, name, url, color }) => (
     >
       <FontAwesomeIcon name={fontAwesomeIcon} />
     </IconLink>
+
   </Tooltip>
 );
 

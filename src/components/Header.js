@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { SectionLinks } from 'react-scroll-section';
 import Fade from 'react-reveal/Fade';
 import RouteLink from './RouteLink';
-import Logo from './Logo/Portfolio.svg';
+import Logo from './Logo/Reactvector.svg';
 
 const capitalize = s => s && s[0].toUpperCase() + s.slice(1);
 
@@ -16,6 +16,14 @@ const HeaderContainer = styled(Headroom)`
 
   position: absolute;
   width: 100%;
+`;
+
+const ImageLogo = styled(Image)`
+  transition: all 0.85s ease-in-out 0s;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
 `;
 
 const formatLinks = allLinks =>
@@ -49,7 +57,7 @@ const Header = () => (
             const { home, links } = formatLinks(allLinks);
 
             const homeLink = home && (
-              <Image
+              <ImageLogo
                 src={Logo}
                 width="50px"
                 alt="Portfolio Logo"
