@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-mate",
+  "name": "andrewel",
   "version": "2.5.1",
   "description": "Gatsby v2 starter to create a top notch portfolio!",
   "main": "index.js",
@@ -22,7 +22,7 @@
     "PWA",
     "portfolio"
   ],
-  "author": "Ema Suriano",
+  "author": "Andrei Ulasau",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/EmaSuriano/gatsby-starter-mate/issues"
