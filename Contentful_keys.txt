@@ -1,3 +1,4 @@
 vlason15@gmail.com
 SPACE_ID=tpq39526dnn2
-ACCESS_TOKEN=DNaoRchF1rVNF4iGJBxcjGQhn_3BCdUTZg6idE5HM4s
+Content Delivery API ACCESS_TOKEN=DNaoRchF1rVNF4iGJBxcjGQhn_3BCdUTZg6idE5HM4s
+Content Preview API - access token=DY7BcOo9Px1BkqaCRMjXm0P7IkUoaZ9urW8ObcQMe00
