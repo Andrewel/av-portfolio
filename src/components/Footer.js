@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
-import { Text, Box, Link, Flex } from 'rebass';
-import Fade from 'react-reveal/Fade';
-import SocialLink from './SocialLink';
+import React from "react";
+import styled from "styled-components";
+import { StaticQuery, graphql } from "gatsby";
+import { Text, Box, Link, Flex } from "rebass";
+import Fade from "react-reveal/Fade";
+import SocialLink from "./SocialLink";
 
 const FooterContainer = styled.footer`
   min-width: 320px;
@@ -17,10 +17,10 @@ const FooterContainer = styled.footer`
 `;
 
 const TextFooter = styled(Text)`
-  color: ${props => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.background};
 
   & a {
-    color: ${props => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.background};
   }
 `;
 
@@ -40,7 +40,7 @@ const Footer = () => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       const { name, socialLinks } = data.contentfulAbout;
 
       return (
@@ -48,7 +48,7 @@ const Footer = () => (
           <FooterContainer>
             <Fade left>
               <TextFooter fontSize={[2, 3]}>
-                <span>{`${name} Portfolio powered by `}</span>
+                <span>{`Portfolio powered by `}</span>
                 <Link href="https://www.gatsbyjs.org/">Gatsby</Link>
                 <span> and </span>
                 <Link href="https://www.contentful.com/" mr={1}>
