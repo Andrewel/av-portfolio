@@ -7,11 +7,11 @@ import Fade from 'react-reveal/Fade';
 import RouteLink from './RouteLink';
 import Logo from './Logo/Reactvector.svg';
 
-const capitalize = s => s && s[0].toUpperCase() + s.slice(1);
+const capitalize = (s) => s && s[0].toUpperCase() + s.slice(1);
 
 const HeaderContainer = styled(Headroom)`
   .headroom--pinned {
-    background: ${props => props.theme.colors.primaryDark};
+    background: ${(props) => props.theme.colors.primaryDark};
   }
 
   position: absolute;
@@ -26,7 +26,7 @@ const ImageLogo = styled(Image)`
   }
 `;
 
-const formatLinks = allLinks =>
+const formatLinks = (allLinks) =>
   Object.entries(allLinks).reduce(
     (acc, [key, value]) => {
       const isHome = key === 'home';
@@ -52,7 +52,7 @@ const Header = () => (
         alignItems="center"
         p={3}
       >
-        <SectionLinks>
+        {/* <SectionLinks>
           {({ allLinks }) => {
             const { home, links } = formatLinks(allLinks);
 
@@ -84,7 +84,7 @@ const Header = () => (
               </Fragment>
             );
           }}
-        </SectionLinks>
+        </SectionLinks> */}
       </Flex>
     </Fade>
   </HeaderContainer>

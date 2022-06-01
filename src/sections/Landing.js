@@ -43,7 +43,8 @@ const centerHorizontally = { marginRight: 'auto', marginLeft: 'auto' };
 
 const LandingPage = () => (
   <Section.Container id="home" Background={Background}>
-    <StaticQuery
+    <div></div>
+    {/* <StaticQuery
       query={graphql`
         query SiteTitleQuery {
           contentfulAbout {
@@ -105,7 +106,7 @@ const LandingPage = () => (
           </Fragment>
         );
       }}
-    />
+    /> */}
   </Section.Container>
 );
 

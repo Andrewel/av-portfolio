@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import { Section } from 'react-scroll-section';
 import { Heading } from 'rebass';
-import PropTypes from 'prop-types';
 import Slide from 'react-reveal/Slide';
 import LinkAnimated from './LinkAnimated';
+import { SECTION } from '../utils/constants';
 
 const SectionContainer = styled.div`
   min-height: 100vh;
@@ -17,24 +17,38 @@ const SectionContainer = styled.div`
   justify-content: center;
   padding: 3em 1em;
   scroll-behavior: smooth;
+
+  @media (max-width: 400px) {
+    padding: 2em 1em;
+  }
 `;
+
+type ContainerProps = {
+  id?: SECTION;
+  children: ReactNode;
+  Background?: () => JSX.Element;
+};
 
 const DefaultBackground = () => <div />;
 
-const Container = ({ id, children, Background = DefaultBackground }) => (
+const Container = ({
+  id,
+  children,
+  Background = DefaultBackground,
+}: ContainerProps) => (
   <Section id={id} style={{ position: 'relative' }}>
     <Background />
     <SectionContainer>{children}</SectionContainer>
   </Section>
 );
 
-Container.propTypes = {
-  id: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-  Background: PropTypes.func,
+type HeaderProps = {
+  name: string;
+  icon?: string;
+  label?: string;
 };
 
-const Header = ({ name, icon = '', label = '' }) => (
+const Header = ({ name, icon = '', label = '' }: HeaderProps) => (
   <Slide left>
     <Heading color="secondaryDark" mb={4}>
       <LinkAnimated selected>
@@ -48,12 +62,6 @@ const Header = ({ name, icon = '', label = '' }) => (
     </Heading>
   </Slide>
 );
-
-Header.propTypes = {
-  name: PropTypes.string.isRequired,
-  icon: PropTypes.string,
-  label: PropTypes.string,
-};
 
 export default {
   Container,
