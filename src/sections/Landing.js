@@ -43,8 +43,7 @@ const centerHorizontally = { marginRight: 'auto', marginLeft: 'auto' };
 
 const LandingPage = () => (
   <Section.Container id="home" Background={Background}>
-    <div></div>
-    {/* <StaticQuery
+    <StaticQuery
       query={graphql`
         query SiteTitleQuery {
           contentfulAbout {
@@ -59,7 +58,7 @@ const LandingPage = () => (
           }
         }
       `}
-      render={data => {
+      render={(data) => {
         const { name, socialLinks, roles } = data.contentfulAbout;
 
         return (
@@ -73,7 +72,6 @@ const LandingPage = () => (
             >
               {`Hello, I'm ${name}!`}
             </Heading>
-
             <Heading
               as="h2"
               color="primary"
@@ -85,14 +83,13 @@ const LandingPage = () => (
               <TextLoop interval={5000}>
                 {roles
                   .sort(() => Math.random() - 0.5)
-                  .map(text => (
+                  .map((text) => (
                     <Text width={[300, 500]} key={text}>
                       {text}
                     </Text>
                   ))}
               </TextLoop>
             </Heading>
-
             <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
               {socialLinks.map(({ id, ...rest }) => (
                 <Box mx={3} fontSize={[5, 6, 6]} key={id}>
@@ -100,13 +97,14 @@ const LandingPage = () => (
                 </Box>
               ))}
             </Flex>
+            {/* // TODO: refactor
             <SectionLink section="about">
               {({ onClick }) => <MouseIcon onClick={onClick} />}
-            </SectionLink>
+            </SectionLink> */}
           </Fragment>
         );
       }}
-    /> */}
+    />
   </Section.Container>
 );
 

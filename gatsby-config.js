@@ -9,7 +9,7 @@ const client = contentful.createClient({
   accessToken: ACCESS_TOKEN,
 });
 
-const getAboutEntry = entry => entry.sys.contentType.sys.id === 'about';
+const getAboutEntry = (entry) => entry.sys.contentType.sys.id === 'about';
 
 const plugins = [
   'gatsby-plugin-react-helmet',
@@ -37,29 +37,62 @@ const plugins = [
   'gatsby-plugin-offline',
 ];
 
-module.exports = client.getEntries().then(entries => {
-  const { mediumUser } = entries.items.find(getAboutEntry).fields;
+// module.exports = client.getEntries().then(entries => {
+//   const { mediumUser } = entries.items.find(getAboutEntry).fields;
 
-  /* plugins.push({
-    resolve: 'gatsby-source-medium',
-    options: {
-      username: mediumUser || '@medium',
-    },
-  }); */
+//   /* plugins.push({
+//     resolve: 'gatsby-source-medium',
+//     options: {
+//       username: mediumUser || '@medium',
+//     },
+//   }); */
 
-  if (ANALYTICS_ID) {
-    plugins.push({
-      resolve: 'gatsby-plugin-google-analytics',
+//   if (ANALYTICS_ID) {
+//     plugins.push({
+//       resolve: 'gatsby-plugin-google-analytics',
+//       options: {
+//         trackingId: ANALYTICS_ID,
+//       },
+//     });
+//   }
+
+//   return {
+//     siteMetadata: {
+//       isMediumUserDefined: !!mediumUser,
+//     },
+//     plugins,
+//   };
+// });
+
+const contentfulConfig = {
+  spaceId: SPACE_ID,
+  accessToken: ACCESS_TOKEN,
+};
+
+module.exports = {
+  siteMetadata: {
+    title: 'Gatsby Contentful Starter',
+    description: 'Official Contentful Gatsby Starter',
+  },
+  plugins: [
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-image',
+    'gatsby-plugin-styled-components',
+    'gatsby-transformer-remark',
+    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        trackingId: ANALYTICS_ID,
+        google: {
+          families: ['Cabin', 'Open Sans'],
+        },
       },
-    });
-  }
-
-  return {
-    siteMetadata: {
-      isMediumUserDefined: !!mediumUser,
     },
-    plugins,
-  };
-});
+    {
+      resolve: 'gatsby-source-contentful',
+      options: contentfulConfig,
+    },
+  ],
+};

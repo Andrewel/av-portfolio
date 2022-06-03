@@ -30,11 +30,19 @@
   },
   "homepage": "https://github.com/Andrewel/av-portfolio#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
     "@rebass/preset": "^4.0.5",
+    "chalk": "^4.1.0",
     "contentful": "9.1.29",
     "dotenv": "16.0.1",
     "envfile": "^3.0.0",
     "gatsby": "4.15.1",
+    "gatsby-plugin-image": "^2.0.0",
+    "gatsby-plugin-sharp": "^4.0.0",
+    "gatsby-transformer-sharp": "^4.0.0",
     "gatsby-plugin-google-analytics": "4.15.0",
     "gatsby-plugin-manifest": "4.15.0",
     "gatsby-plugin-offline": "5.15.0",
@@ -42,7 +50,7 @@
     "gatsby-plugin-react-helmet": "5.15.0",
     "gatsby-plugin-styled-components": "5.15.0",
     "gatsby-plugin-web-font-loader": "1.0.4",
-    "gatsby-source-contentful": "7.13.0",
+    "gatsby-source-contentful": "7.0.0",
     "gatsby-source-medium": "4.15.0",
     "gatsby-transformer-remark": "5.15.0",
     "inquirer": "8.2.4",
@@ -61,8 +69,7 @@
     "styled-components": "5.3.5"
   },
   "devDependencies": {
-    "chalk": "^2.4.1",
-    "contentful-import": "^7.4.0",
+    "contentful-import": "^8.0.0",
     "eslint": "^8.16.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
@@ -70,8 +77,9 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.12.3",
     "husky": "^8.0.1",
-    "lint-staged": "^12.4.3",
-    "prettier": "^2.6.2"
+    "lint-staged": "^13.0.0",
+    "prettier": "^2.6.2",
+    "typescript": "^4.7.2"
   },
   "husky": {
     "hooks": {

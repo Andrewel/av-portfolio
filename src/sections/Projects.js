@@ -128,7 +128,7 @@ const Project = ({
       </TextContainer>
 
       <ImageContainer>
-        <ProjectImage src={logo.image.src} alt={logo.title} />
+        <ProjectImage src={logo?.image?.src} alt={logo.title} />
         <ProjectTag>
           <Flex
             style={{
@@ -180,8 +180,7 @@ Project.propTypes = {
 const Projects = () => (
   <Section.Container id="projects" Background={Background}>
     <Section.Header name="Projects" icon="💻" label="notebook" />
-    <div></div>
-    {/* <StaticQuery
+    <StaticQuery
       query={graphql`
         query ProjectsQuery {
           contentfulAbout {
@@ -195,9 +194,6 @@ const Projects = () => (
               type
               logo {
                 title
-                image: resize(width: 200, quality: 100) {
-                  src
-                }
               }
             }
           }
@@ -212,7 +208,7 @@ const Projects = () => (
           ))}
         </CardContainer>
       )}
-    /> */}
+    />
   </Section.Container>
 );
 

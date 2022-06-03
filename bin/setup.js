@@ -29,7 +29,7 @@ const questions = [
   {
     name: 'spaceId',
     message: 'Your Space ID',
-    validate: input =>
+    validate: (input) =>
       /^[a-z0-9]{12}$/.test(input) ||
       'Space ID must be 12 lowercase characters',
   },
@@ -69,4 +69,4 @@ inquirer
       )} to see it in action.`,
     );
   })
-  .catch(error => console.error(error));
+  .catch((error) => console.error(error));
