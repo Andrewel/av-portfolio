@@ -128,7 +128,7 @@ const Project = ({
       </TextContainer>
 
       <ImageContainer>
-        <ProjectImage src={logo?.image?.src} alt={logo.title} />
+        <ProjectImage src={logo?.file?.url} alt={logo.title} />
         <ProjectTag>
           <Flex
             style={{
@@ -194,6 +194,9 @@ const Projects = () => (
               type
               logo {
                 title
+                file {
+                  url
+                }
               }
             }
           }
