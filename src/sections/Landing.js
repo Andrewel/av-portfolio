@@ -2,11 +2,12 @@ import React, { Fragment } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { Heading, Flex, Box, Text } from 'rebass';
 import TextLoop from 'react-text-loop';
-import { SectionLink } from 'react-scroll-section';
 import Section from '../components/Section';
 import SocialLink from '../components/SocialLink';
-import MouseIcon from '../components/MouseIcon';
 import Triangle from '../components/Triangle';
+import { getSectionHref } from '../utils/helpers';
+import ScrollIcon from '../components/ScrollIcon';
+import { SECTION } from '../utils/constants';
 
 const Background = () => (
   <div>
@@ -97,10 +98,7 @@ const LandingPage = () => (
                 </Box>
               ))}
             </Flex>
-            {/* // TODO: refactor
-            <SectionLink section="about">
-              {({ onClick }) => <MouseIcon onClick={onClick} />}
-            </SectionLink> */}
+            <ScrollIcon href={`#${getSectionHref(SECTION.about)}`} />
           </Fragment>
         );
       }}
