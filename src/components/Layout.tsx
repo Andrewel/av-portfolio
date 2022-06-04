@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
 
 config({ ssrFadeout: true });
 
-const loadScript = src => {
+const loadScript = (src) => {
   const tag = document.createElement('script');
   tag.src = src;
   tag.defer = true;
