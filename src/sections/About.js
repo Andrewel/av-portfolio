@@ -6,7 +6,6 @@ import ReactMarkdown from 'react-markdown';
 import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
 import Triangle from '../components/Triangle';
-import markdownRenderer from '../components/MarkdownRenderer';
 
 const Background = () => (
   <div>
@@ -58,14 +57,16 @@ const About = () => (
       `}
       render={(data) => {
         const { aboutMe, profile } = data.contentfulAbout;
+
         return (
           <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
             <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
               <Fade bottom>
-                <ReactMarkdown
+                {/* <ReactMarkdown
                   source={aboutMe.aboutMe}
                   renderers={markdownRenderer}
-                />
+                /> */}
+                <ReactMarkdown>{aboutMe.aboutMe}</ReactMarkdown>,
               </Fade>
             </Box>
 
