@@ -25,7 +25,8 @@ const Header = () => {
         flexWrap="wrap"
         justifyContent="space-between"
         alignItems="center"
-        px={3}
+        paddingX={3}
+        paddingY={2}
       >
         <RebassLink href={`#${getSectionHref(SECTION.home)}`} variant="empty">
           <Flex justifyContent="center">
