@@ -7,6 +7,7 @@ export type QueryResponse = {
       id: string;
       name: string;
       description: string;
+      des: any;
       homepage: string;
       repository: string;
       publishedDate: string;
@@ -29,6 +30,9 @@ export const useProjectsQuery = (): Project[] => {
           id
           name
           description
+          des {
+            raw
+          }
           homepage: projectUrl
           repository: repositoryUrl
           publishedDate(formatString: "YYYY")

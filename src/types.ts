@@ -16,6 +16,7 @@ export type Favicon = {
 export type Project = {
   name: string;
   description: string;
+  des: any;
   homepage: string;
   repository: string;
   type: string;

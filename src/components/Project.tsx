@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { Project as ProjectType } from '../types';
 import { Card } from './Card';
 import ImageSubtitle from './ImageSubtitle';
+import { renderRichText } from 'gatsby-source-contentful/rich-text';
 
 type Props = ProjectType;
 
@@ -71,6 +72,7 @@ const ProjectTag = styled.div`
 export const Project = ({
   name,
   description,
+  des,
   homepage,
   repository,
   type,
@@ -88,6 +90,9 @@ export const Project = ({
         <Text width={[1]} style={{ overflow: 'auto' }}>
           {description}
         </Text>
+        <Text width={[1]} style={{ overflow: 'auto' }}>
+          {des?.raw ? renderRichText(des) : ''}
+        </Text>
       </TextContainer>
 
       <ImageContainer>
@@ -98,20 +103,24 @@ export const Project = ({
               float: 'right',
             }}
           >
-            <Box mx={1} fontSize={5}>
-              <SocialLink
-                name="Check repository"
-                fontAwesomeIcon="github"
-                url={repository}
-              />
-            </Box>
-            <Box mx={1} fontSize={5}>
-              <SocialLink
-                name="See project"
-                fontAwesomeIcon="globe"
-                url={homepage}
-              />
-            </Box>
+            {repository && (
+              <Box mx={1} fontSize={5}>
+                <SocialLink
+                  name="Check repository"
+                  fontAwesomeIcon="github"
+                  url={repository}
+                />
+              </Box>
+            )}
+            {homepage && (
+              <Box mx={1} fontSize={5}>
+                <SocialLink
+                  name="See project"
+                  fontAwesomeIcon="globe"
+                  url={homepage}
+                />
+              </Box>
+            )}
           </Flex>
           <ImageSubtitle bg="primary" color="white" y="bottom" x="right" round>
             {type}
