@@ -35,10 +35,12 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
     "@rebass/preset": "^4.0.5",
+    "axios": "^0.27.2",
     "chalk": "^4.1.0",
     "contentful": "9.1.29",
     "dotenv": "16.0.1",
     "envfile": "^3.0.0",
+    "formik": "^2.2.9",
     "gatsby": "4.15.1",
     "gatsby-plugin-google-analytics": "4.15.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
@@ -56,8 +58,10 @@
     "inquirer": "8.2.4",
     "prop-types": "15.8.1",
     "react": "18.1.0",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "18.1.0",
     "react-fontawesome": "1.7.1",
+    "react-google-recaptcha": "^2.1.0",
     "react-headroom": "3.2.0",
     "react-helmet": "6.1.0",
     "react-markdown": "8.0.3",
@@ -66,7 +70,8 @@
     "react-text-loop": "2.3.0",
     "react-tippy": "1.4.0",
     "rebass": "4.0.7",
-    "styled-components": "5.3.5"
+    "styled-components": "5.3.5",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "contentful-import": "^8.0.0",
