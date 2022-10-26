@@ -46,19 +46,7 @@ const Footer = () => (
       return (
         <Box p={3} backgroundColor="#000051">
           <FooterContainer>
-            <Fade left>
-              <TextFooter fontSize={[2, 3]}>
-                <span>{`${name} website powered by `}</span>
-                <Link href="https://www.gatsbyjs.org/">Gatsby</Link>
-                <span> and </span>
-                <Link href="https://www.contentful.com/" mr={1}>
-                  Contentful
-                </Link>
-                <span role="img" aria-label="heart">
-                  ❤️
-                </span>
-              </TextFooter>
-            </Fade>
+            <Fade left></Fade>
             <Flex>
               <Fade right>
                 {socialLinks.map(({ id, ...rest }) => (

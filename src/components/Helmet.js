@@ -16,7 +16,7 @@ const Helmet = ({ theme = {} }) => (
     `}
     render={(data) => {
       const { name, description, profile } = data.contentfulAbout;
-      const title = `${name} Portfolio`;
+      const title = `au systems`;
 
       return (
         <ReactHelmet htmlAttributes={{ lang: 'en' }}>

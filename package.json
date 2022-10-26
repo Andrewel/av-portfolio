@@ -1,7 +1,7 @@
 {
   "name": "andrewel",
   "version": "2.5.1",
-  "description": "Gatsby portfolio!",
+  "description": "au systems site",
   "main": "index.js",
   "scripts": {
     "build": "gatsby clean && gatsby build",

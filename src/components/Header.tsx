@@ -51,11 +51,11 @@ const Header = () => {
                 </Link>
               </Box>
             ))}
-            <Box  ml={[2, 3]} color="background" fontSize={[2, 3]}>
+          {/* <Box  ml={[2, 3]} color="background" fontSize={[2, 3]}>
                 <Link href={`portfolio`} tabIndex={0}>
                     {"Portfolio"}
                 </Link>
-            </Box>
+            </Box> */}
         </Flex>
       </Flex>
     </StyledHeadroom>
